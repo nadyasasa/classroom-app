@@ -1,29 +1,92 @@
 import React from "react"
-import { BsFillPlusCircleFill } from "react-icons/bs";
 import AddForm from "../Modal/InputForm";
+import Navbar from "../component/navbar.jsx";
 
 const dashboard = () => {
     return (
-        <div className="bg-blue h-screen flex pt-10 px-16">
-            <div className="bg-white h-full flex flex-col gap-5 w-full pr-5 rounded-lg">
-                <div className="flex justify-between ml-5 mt-5">
-                    <div className="ml-1.5 mt-1">
-                        Daftar Peminjaman Ruangan
+        <div className="bg-blue h-screen flex py-5 px-16">
+            <div className="bg-white h-full w-full gap-5 w-full pr-5 rounded-lg">
+                <Navbar/>
+                <div className="h-full w-full">
+                    <div className="py-3 mt-8 mr-4 ml-8">
+                        <h5 className="font-medium mb-4 text-2xl text-center">
+                            DAFTAR RUANGAN
+                        </h5>
+                        <table className="table-fixed border-collapse border border-gray w-full h-full">
+                            <thead>
+                                <tr className="w-72 bg-yellow">
+                                    <th className="border border-gray w-1/6">Nama</th>
+                                    <th className="border border-gray w-1/6">Email</th>
+                                    <th className="border border-gray w-1/6">Ruangan</th>
+                                    <th className="border border-gray w-1/6">Waktu</th>
+                                    <th className="border border-gray w-1/6">Keperluan</th>
+                                    <th className="border border-gray w-1/6">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                <tr>
+                                    <td className="border border-gray">P</td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                </tr>
+                                <tr>
+                                    <td className="border border-gray">P</td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                </tr>
+                                <tr>
+                                    <td className="border border-gray">P</td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                </tr>
+                                <tr>
+                                    <td className="border border-gray">P</td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                </tr>
+                                <tr>
+                                    <td className="border border-gray">P</td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                </tr>
+                                <tr>
+                                    <td className="border border-gray">P</td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                </tr>
+                                <tr>
+                                    <td className="border border-gray">P</td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray"></td>
+                                </tr>
+                            </tbody>
+                        </table>        
                     </div>
                     <div className="my-16">
                         <AddForm />
                     </div>
-                    <div className="flex justify-between">
-                        <button className="bg-black text-white flex font-normal text-sm rounded-lg px-2 py-1 items-center content-center">
-                            <BsFillPlusCircleFill />
-                            <div className="ml-2">Tambah Peminjaman</div>
-                        </button>
-                    </div>
                 </div>
-                <div>
-                    Tabel
-                </div>
-               
             </div>
         </div>
     )
