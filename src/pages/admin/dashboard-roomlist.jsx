@@ -1,6 +1,8 @@
 import React from "react"
 import AddForm from "../../Modal/InputForm";
-import Navbar from "../../component/navbar.jsx";
+import Navbar from "../../component/navbaradmin.jsx";
+import { AiFillDelete } from "react-icons/ai";
+import { AiFillEdit } from "react-icons/ai";
 
 const dashboard = () => {
     return (
@@ -30,7 +32,7 @@ const dashboard = () => {
                                     <td className="border border-gray"></td>
                                     <td className="border border-gray"></td>
                                     <td className="border border-gray"></td>
-                                    <td className="border border-gray"></td>
+                                    <td className="border border-gray flex items-center"><AiFillDelete/><AiFillEdit/></td>
                                 </tr>
                                 <tr>
                                     <td className="border border-gray">P</td>

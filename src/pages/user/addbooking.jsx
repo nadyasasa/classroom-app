@@ -25,8 +25,8 @@ const UserBook = () => {
                         {listRules}
                     </ol>           
                 </div>
-                <div className="grid grid-cols-2 gap-x-16 gap-y-4 pb-5 items-center bg-graylight border-solid border-2 border-gray px-10 py-3 ml-8 mr-4">
-                    <div className="bw-full">
+                <form className="grid grid-cols-2 gap-x-16 gap-y-4 pb-5 items-center bg-graylight border-solid border-2 border-gray px-10 py-3 ml-8 mr-4">
+                    <div className="w-full">
                         <label>
                             Nama Peminjam
                         </label>
@@ -101,7 +101,7 @@ const UserBook = () => {
                             </input>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div className="flex justify-center">
                     <button className="h-fit w-fit bg-[#F4C522] text-white font py-2 px-4 flex rounded">
                         Book Now
