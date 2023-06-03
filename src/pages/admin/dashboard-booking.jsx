@@ -1,6 +1,5 @@
 import React from "react"
-import AddForm from "../Modal/InputForm";
-import Navbar from "../component/navbar.jsx";
+import Navbar from "../../component/navbar.jsx";
 
 const dashboard = () => {
     return (
@@ -82,9 +81,6 @@ const dashboard = () => {
                                 </tr>
                             </tbody>
                         </table>        
-                    </div>
-                    <div className="my-16">
-                        <AddForm />
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from "react"
-import Navbar from "../component/navbar.jsx";
+import Navbar from "../../component/navbar.jsx";
 
 const rules = [
     {description: 'Maksimal Peminjaman dilakukan dalam 1 hari sebelum penggunaan ruangan.'},
