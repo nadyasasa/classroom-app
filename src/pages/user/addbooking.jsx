@@ -1,16 +1,28 @@
-import React from "react"
+import React, {useState} from "react"
 import Navbar from "../../component/navbar.jsx";
 
+function AddBooking(){
 const rules = [
     {description: 'Maksimal Peminjaman dilakukan dalam 1 hari sebelum penggunaan ruangan.'},
     {description: 'Pengguna yang sudah memesan tapi tidak hadir, maka dikenakan sanksi pemblokiran sampai 3 hari. Kecuali melakukan pembatalan pemesanan maksimal 1 hari sebelum waktu jam buka pada periode dan hari yang ditentukan.'},
     {description: 'Apabila mahasiswa melakukan 2 kali pemesanan kursi dalam 1 hari yang sama dan tidak hadir pada periode 1 tanpa pembatalan, maka sistem akan membatalkan pesanan periode 2 secara otomatis.'},
     {description: 'Pemesanan tempat tidak dapat dilakukan pada waktu periode berjalan.'}
   ];
-const UserBook = () => {
+
+const [formData, setFormData] = useState({
+    location: '',
+  });
+   
+const handleChange = (e, index) => {
+    setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
     const listRules = rules.map(rules => 
         <li>{rules.description}</li>
     );
+    
     return (
         <div className="bg-blue h-screen flex py-5 px-16 text-xl">
             <div className="bg-white h-full flex flex-col gap-5 w-full pr-5 rounded-lg">
@@ -27,7 +39,7 @@ const UserBook = () => {
                 </div>
                 <form className="grid grid-cols-2 gap-x-16 gap-y-4 pb-5 items-center bg-graylight border-solid border-2 border-gray px-10 py-3 ml-8 mr-4">
                     <div className="w-full">
-                        <label>
+                        <label htmlFor="name">
                             Nama Peminjam
                         </label>
                         <input
@@ -38,7 +50,7 @@ const UserBook = () => {
                         </input>
                     </div>
                     <div className="bw-full">
-                        <label>
+                        <label htmlFor="email">
                             Email UGM
                         </label>
                         <input
@@ -49,7 +61,7 @@ const UserBook = () => {
                         </input>
                     </div>
                     <div className="bw-full">
-                        <label>
+                        <label htmlFor="needs">
                             Keperluan
                         </label>
                         <input
@@ -59,16 +71,22 @@ const UserBook = () => {
                             >
                         </input>
                     </div>
-                    <div className="bw-full">
-                        <label>
-                            Ruangan
+                    <div>
+                        <label htmlFor="room" className="block mb-1">
+                            Ruangan:
                         </label>
-                        <input
-                            type="text"
-                            id="classroom"
-                            className="w-full mt-2 bg-white border border-graydark rounded"
-                            >
-                        </input>
+                        <select
+                            id="location"
+                            name="location"
+                            value={formData.location}
+                            onChange={handleChange}
+                            className="w-full border border-gray-300 px-3 py-2 rounded"
+                        >
+                            <option value="">Pilih Ruangan</option>
+                            <option value="Location A">E6 - Lt. 3</option>
+                            <option value="Location B">E9 - Lt. 3</option>
+                            <option value="Location C">RPL - Lt. 2</option>
+                        </select>
                     </div>
                     <div className="bw-full">
                         <label>
@@ -112,4 +130,5 @@ const UserBook = () => {
     )
 }
 
-export default UserBook
+
+export default AddBooking;
