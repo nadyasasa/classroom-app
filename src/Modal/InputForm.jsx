@@ -7,9 +7,7 @@ function InputForm() {
   const [formData, setFormData] = useState({
     name: '',
     location: '',
-    facilities: [''],
     description: '',
-    image: null,
   });
 
   const toggleModal = () => {
@@ -17,32 +15,18 @@ function InputForm() {
   };
 
   const handleChange = (e, index) => {
-    if (e.target.name === 'image') {
-      setFormData({
-        ...formData,
-        image: e.target.files[0],
-      });
-    } else if (e.target.name === 'facilities') {
-      const updatedFacilities = [...formData.facilities];
-      updatedFacilities[index] = e.target.value;
-      setFormData({
-        ...formData,
-        facilities: updatedFacilities,
-      });
-    } else {
       setFormData({
         ...formData,
         [e.target.name]: e.target.value,
       });
-    }
-  };
+    };
+  
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Lakukan sesuatu dengan data formulir
     console.log(formData);
-    toggleModal(); // Menutup modal setelah pengiriman formulir
+    toggleModal(); 
   };
 
   return (
